@@ -470,12 +470,23 @@ $ git branch -a //查看本地和远程的所有分支
 
 $ git branch <branchname> //新建分支
 
+$ git checkout <branchname> //切换分支
+
+$ git checkout -b <branchname> //新建并切换分支
+
+$ git push origin <branchname> //把本地分支推送到远程，让远程也有这个分支
+
 $ git branch -d <branchname> //删除本地分支
 
-$ git branch -d -r <branchname> //删除远程分支，删除后还需推送到服务器
+$ git branch -d -r <branchname> //删除远程分支（删除后还需推送到服务器）
+
 $ git push origin:<branchname>  //删除后推送至服务器
 
 $ git branch -m <oldbranch> <newbranch> //重命名本地分支
+
+$ git merge <branchname>  //合并某分支到当前分支
+
+$ git pull origin main //拉取main分支的线上代码，保持本地与线上同步
 ```
 
 
@@ -532,7 +543,7 @@ $ git branch -m <oldbranch> <newbranch> //重命名本地分支
 
 - `	git log`命令与`git reflog`命令作用范围示意图：
 
-<img src="https://upload-images.jianshu.io/upload_images/2495229-b7cefe27813a4489.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp" alt="img" style="zoom: 80%;" />
+<img src="https://raw.githubusercontent.com/fograinwater/PicGo-img/master/win11/2495229-b7cefe27813a4489.png" alt="img" style="zoom: 80%;" />
 
 - `reflog`并不是Git仓库的一部分，它单独存储，它纯属是本地的
 
@@ -625,7 +636,7 @@ $ git branch -m <oldbranch> <newbranch> //重命名本地分支
 
 
 
-## 九、标签管理
+## 八、标签管理
 
 标签实际上是版本库的快照，跟某个commit绑在一起
 
